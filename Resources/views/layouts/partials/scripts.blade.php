@@ -1,15 +1,5 @@
-{{-- Bootstrap core JavaScript
-	<script src="/themes/foodpicky/js/jquery.min.js"></script>
-	<script src="/themes/foodpicky/js/tether.min.js"></script>
-	<script src="/themes/foodpicky/js/bootstrap.min.js"></script>
-	<script src="/themes/foodpicky/js/animsition.min.js"></script>
-	<script src="/themes/foodpicky/js/bootstrap-slider.min.js"></script>
-	<script src="/themes/foodpicky/js/jquery.isotope.min.js"></script>
-	<script src="/themes/foodpicky/js/headroom.js"></script>
-	<script src="/themes/foodpicky/js/foodpicky.min.js"></script>
-	================================================== --}}
 <script>
-    var base_url = '{{ Theme::asset('/') }}';
+    var base_url = '{{ asset('/') }}';
     var lang = '{{ app()->getLocale() }}';
     {{-- var google_maps_api='{{ config('xra.google.maps.api') }}'; --}}
     @if (\Request::has('address'))
@@ -22,21 +12,38 @@
 </script>
 @stack('scripts_before')
 @php
-//Theme::add('pub_theme::js/jquery.min.js',1);
-//Theme::add('/theme/bc/jquery/dist/jquery.min.js', 1);
-//Theme::add('pub_theme::js/tether.min.js');
-//Theme::add('pub_theme::js/bootstrap.min.js');
-//Theme::add('pub_theme::js/foodpicky.js');
-/*
- Theme::add('pub_theme::js/bootstrap-slider.min.js');
- Theme::add('pub_theme::js/jquery.isotope.min.js');
- Theme::add('pub_theme::js/headroom.js');
- Theme::add('/theme/bc/matchHeight/dist/jquery.matchHeight-min.js');
- //Theme::add('pub_theme::js/jquery.validate.min.js');
- */
-//Theme::add('pub_theme::js/xot.js');
+Theme::add('pub_theme::dist/js/manifest.js');
+Theme::add('pub_theme::dist/js/vendor.js');
+Theme::add('pub_theme::dist/js/app.js');
+//Theme::add('pub_theme::js/theme.js');
 @endphp
 {!! Theme::showScripts(false) !!}
+
+<livewire:scripts />
 @stack('scripts')
 
-{{-- dd(Theme::__getStatic('langs')) --}}
+<!-- JavaScript files-->
+<script>
+    // ------------------------------------------------------- //
+    //   Inject SVG Sprite -
+    //   see more here
+    //   https://css-tricks.com/ajaxing-svg-sprite/
+    // ------------------------------------------------------ //
+    function injectSvgSprite(path) {
+
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", path, true);
+        ajax.send();
+        ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+    }
+    // to avoid CORS issues when viewing using file:// protocol, using the demo URL for the SVG sprite
+    // use your own URL in production, please :)
+    // https://demo.bootstrapious.com/directory/1-0/icons/orion-svg-sprite.svg
+    //- injectSvgSprite('${path}icons/orion-svg-sprite.svg');
+    //injectSvgSprite('https://demo.bootstrapious.com/directory/1-4/icons/orion-svg-sprite.svg');
+</script>
