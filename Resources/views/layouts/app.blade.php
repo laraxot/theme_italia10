@@ -18,5 +18,5 @@
         @include('pub_theme::layouts.partials.footer')
     @endif
     @stack('modals')
-    @include('cookieConsent::index')
+    {{--@include('cookieConsent::index')--}}
 @endsection

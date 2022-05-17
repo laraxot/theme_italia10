@@ -33,10 +33,11 @@
 			@include('pub_theme::layouts.partials.footer.pop_locations')
 			--}}
 			
+			@if(isset($restaurant))
 			{!! Theme::cache('pub_theme::layouts.partials.footer.pop_restaurants',['restaurant'=>$restaurant]) !!}
 			{!! Theme::cache('pub_theme::layouts.partials.footer.pages',['page'=>$page]) !!}
 			{!! Theme::cache('pub_theme::layouts.partials.footer.pop_locations',['location'=>$location]) !!}
-			
+			@endif
 		</div>
 		<!-- top footer ends -->
 		<!-- bottom footer statrs -->

@@ -23,10 +23,10 @@
 @stack('scripts_before')
 @php
 //Theme::add('pub_theme::js/jquery.min.js',1);
-Theme::add('/theme/bc/jquery/dist/jquery.min.js', 1);
+//Theme::add('/theme/bc/jquery/dist/jquery.min.js', 1);
 //Theme::add('pub_theme::js/tether.min.js');
-Theme::add('pub_theme::js/bootstrap.min.js');
-Theme::add('pub_theme::js/foodpicky.js');
+//Theme::add('pub_theme::js/bootstrap.min.js');
+//Theme::add('pub_theme::js/foodpicky.js');
 /*
  Theme::add('pub_theme::js/bootstrap-slider.min.js');
  Theme::add('pub_theme::js/jquery.isotope.min.js');
@@ -34,7 +34,7 @@ Theme::add('pub_theme::js/foodpicky.js');
  Theme::add('/theme/bc/matchHeight/dist/jquery.matchHeight-min.js');
  //Theme::add('pub_theme::js/jquery.validate.min.js');
  */
-Theme::add('pub_theme::js/xot.js');
+//Theme::add('pub_theme::js/xot.js');
 @endphp
 {!! Theme::showScripts(false) !!}
 @stack('scripts')
