@@ -77,3 +77,5 @@ console.log('to :' + $to);
 //Error: ENOENT: no such file or directory, open 'F:\Resources\views\dist\css\admin-lte.css'
 
 mix.copyDirectory($from, $to);
+
+mix.copyDirectory('./Resources/dist/images', '../../../public_html/images');
