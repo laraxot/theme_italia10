@@ -7,11 +7,11 @@ import { createApp } from 'vue';
 
 //il componente vue va messo qui
 import Map from '../../../../Modules/Geo/Resources/js/components/map/Map2.vue';
-<<<<<<< Updated upstream
+
 import VueExamples from '../../../../Modules/Geo/Resources/js/components/map/VueExamples.vue';
-=======
-import Davide from '../../../../Modules/Geo/Resources/js/components/map/Davide.vue';
->>>>>>> Stashed changes
+
+import Map6 from '../../../../Modules/Geo/Resources/js/components/map/Map6.vue';
+
 
 const app = createApp({
     data() {
@@ -23,9 +23,6 @@ const app = createApp({
 
 //e va aggiunto il componente vue anche qui
 app.component('v-map', Map);
-<<<<<<< Updated upstream
 app.component('v-examples', VueExamples);
-=======
-app.component('v-davide', Davide);
->>>>>>> Stashed changes
+app.component('v-map6', Map6);
 app.mount('#app');
