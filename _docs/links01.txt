@@ -1,0 +1,17 @@
+https://italia.github.io/bootstrap-italia/docs/esempi/template-comuni-vuoto/#
+
+https://italia.github.io/bootstrap-italia/docs/esempi/template-vuoto/#
+
+
+https://github.com/italia/bootstrap-italia-playground
+
+
+HTML VECCHI ma poco cambia
+https://github.com/italia/design-comuni-prototipi
+
+
+https://italia.github.io/bootstrap-italia/docs/progetti/
+
+con mappa interattiva
+https://restoacasa.github.io/
+
