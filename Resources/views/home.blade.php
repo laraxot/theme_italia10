@@ -1,7 +1,6 @@
 @extends('pub_theme::layouts.app')
 
 @section('content')
-<<<<<<< Updated upstream
 
 <div>
     <div>
@@ -278,10 +277,6 @@
 </div>--}}
 
 
-=======
-    <v-examples></v-examples>
-    <v-map></v-map>
->>>>>>> Stashed changes
 @endsection
 @push('scripts_before')
 <script src="data/farmshopGeoJson.js"></script>
